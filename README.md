@@ -4,7 +4,10 @@
 FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.8+ based on standard Python.
 This is a repository that provides to deliver the records to the Prometheus-Export application.
 
-Kafka API for Prometheus(https://github.com/euiyounghwang/prometheus-export) to send an email or other things
+Kafka API for Prometheus(https://github.com/euiyounghwang/prometheus-export) to get a list of Kafka ISR/GetOffset
+- get a list of Kafka ISR's : /apps/kafka_2.11-0.11.0.0/bin/kafka-topics.sh --describe --zookeeper a:2181,b:2181,c:2181 --topic ELASTIC_PIPELINE_QUEUE
+- get a list of Kafka Offset : /apps/kafka_2.11-0.11.0.0/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --topic ELASTIC_PIPELINE_QUEUE --broker-list a:9092, b:9092, c:9092
+
 
 
 #### Python V3.9 Install
